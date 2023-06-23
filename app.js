@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.get("/api/scans", async (req, res, next) => {
+//GET API for "stock-scans"
+app.get("/api/stock-scans", async (req, res, next) => {
     try {
         let scans = await axios.get(FITPAGE_URL);
         let response = {
